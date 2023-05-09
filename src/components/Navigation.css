@@ -1,0 +1,22 @@
+.nav-list{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    
+    align-items: center;
+    
+}
+
+.navigation {
+    min-width: 80%;
+    padding: 4px;
+    background-color: purple;
+}
+
+.shopping-bag {
+    width:50px;
+}
+
+.shopping-bag-display {
+    display: flex;
+}
