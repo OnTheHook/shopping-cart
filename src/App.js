@@ -42,12 +42,20 @@ function App() {
     });
   };
 
+  const deleteItem = (id) => {
+    setItems((prev) => {
+      return prev.filter(item =>{
+        return item.id !==id
+      })
+    })
+  }
+
   
   return (
     <div className="App">
       <Navigation items={items} />
       <Shop addItem={addItem} itemsList={itemsList} />
-      <Cart items={items}/>
+      <Cart items={items} deleteItem={deleteItem} />
     </div>
   );
 }

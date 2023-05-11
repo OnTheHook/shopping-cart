@@ -16,6 +16,7 @@ const CartItemCard = (props) => {
           <div className="product-price-quantity">
             <div>
               +<input className="quantity" type="number" value={props.amount}></input>-
+              <button className="bg-blue-500" onClick={props.onDelete}>Delete</button>
             </div>
           </div>
         </div>
