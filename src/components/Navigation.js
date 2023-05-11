@@ -1,5 +1,5 @@
 import "./Navigation.css";
-import shoppingBag from "../images/shopping-bag.png"
+import shoppingBag from "../images/shopping-bag.png";
 
 const Navigation = (props) => {
   return (
@@ -11,7 +11,16 @@ const Navigation = (props) => {
         <li>
           <h3>Shop</h3>
         </li>
-        <li className="shopping-bag-display"><div><img className="shopping-bag" src={shoppingBag} alt="shopping bag"/></div><div>4</div></li>
+        <li className="shopping-bag-display">
+          <div>
+            <img
+              className="shopping-bag"
+              src={shoppingBag}
+              alt="shopping bag"
+            />
+          </div>
+          <div>{props.items.length > 0 && props.items.length}</div>
+        </li>
       </ul>
     </nav>
   );

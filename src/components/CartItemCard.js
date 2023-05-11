@@ -15,13 +15,13 @@ const CartItemCard = (props) => {
           </div>
           <div className="product-price-quantity">
             <div>
-              +<input className="quantity" type="number" value={0}></input>-
+              +<input className="quantity" type="number" value={props.amount}></input>-
             </div>
           </div>
         </div>
       </div>
       <div>
-        <h3>Sailor Moon</h3>
+        <h3>{props.name}</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -29,7 +29,7 @@ const CartItemCard = (props) => {
           aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div>$100</div>
+      <div>${props.cost}</div>
     </div>
   );
 };
