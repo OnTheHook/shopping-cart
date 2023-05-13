@@ -16,6 +16,8 @@ const Cart = (props) => {
             name={item.name}
             cost={item.cost}
             amount={item.amount}
+            image={item.image}
+            changeAmount={props.changeAmount}
             onDelete={props.deleteItem.bind(null, item.id)}
           />
         );

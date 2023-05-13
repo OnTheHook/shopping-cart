@@ -4,9 +4,9 @@ const Shop = (props) => {
   const handleAddItem = (itemInfo) => {
     props.addItem(itemInfo.id, parseInt(itemInfo.amount));
   };
-
+   console.log(props.itemsList)
   return (
-    <div className="flex flex-wrap gap-4 p-4">
+    <div className="flex flex-wrap gap-4 p-4 justify-center">
       {props.itemsList.map((item) => {
         return (
           <ItemCard
@@ -14,6 +14,7 @@ const Shop = (props) => {
             id={item.id}
             name={item.name}
             cost={item.cost}
+            image={item.image}
             onAddItem={handleAddItem}
           />
         );

@@ -10,13 +10,12 @@
 .navigation {
     min-width: 80%;
     padding: 4px;
-    background-color: purple;
+    background-color: white;
+    color: black;
+    position: relative;
 }
 
 .shopping-bag {
     width:50px;
 }
 
-.shopping-bag-display {
-    display: flex;
-}
