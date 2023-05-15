@@ -27,52 +27,56 @@ const CartItemCard = (props) => {
     setAmount(newAmount);
     props.changeAmount(props.id, newAmount);
   };
+
+  const prevent = (e) => {
+    e.preventDefault();
+  }
   return (
-    <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-      <div class="flex w-2/5">
-        <div class="w-20">
-          <img class="h-24" src={props.image} alt={props.name} />
+    <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+      <div className="flex w-2/5">
+        <div className="w-20">
+          <img className="h-24" src={props.image} alt={props.name} />
         </div>
-        <div class="flex flex-col justify-between ml-4 flex-grow">
-          <span class="font-bold text-sm">{props.name}</span>
-          <span class="text-red-500 text-xs">Motivate Inc.</span>
+        <div className="flex flex-col justify-between ml-4 flex-grow">
+          <span className="font-bold text-sm">{props.name}</span>
+          <span className="text-red-500 text-xs">Motivate Inc.</span>
           <span
             onClick={props.onDelete}
-            class="font-semibold hover:text-red-500 text-gray-500 text-xs"
+            className="font-semibold hover:text-red-500 text-gray-500 text-xs cursor-pointer"
           >
             Remove
           </span>
         </div>
       </div>
-      <div class="flex justify-center w-1/5">
+      <div className="flex justify-center w-1/5">
         <svg
           onClick={decrementAmount}
-          class="fill-current text-gray-600 w-3"
+          className="fill-current text-gray-600 w-3"
           viewBox="0 0 448 512"
         >
           <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
         </svg>
 
         <input
-          class="mx-2 border text-center w-10"
-          min={1}
-          max={99}
+          className="mx-2 border text-center w-10"
+          min="1"
+          max="99"
           type="number"
           value={amount}
           onChange={handleAmountChange}
-          onKeyDown="return false"
+          onKeyDown={prevent}
         />
 
         <svg
           onClick={incrementAmount}
-          class="fill-current text-gray-600 w-3"
+          className="fill-current text-gray-600 w-3"
           viewBox="0 0 448 512"
         >
           <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
         </svg>
       </div>
-      <span class="text-center w-1/5 font-semibold text-sm">${props.cost}</span>
-      <span class="text-center w-1/5 font-semibold text-sm">$400.00</span>
+      <span className="text-center w-1/5 font-semibold text-sm">${props.cost}</span>
+      <span className="text-center w-1/5 font-semibold text-sm">${props.cost * props.amount}</span>
     </div>
   );
 };

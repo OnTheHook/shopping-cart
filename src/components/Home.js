@@ -1,4 +1,5 @@
 import bgImage from "../images/cristian-escobar-abkEAOjnY0s-unsplash.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,9 +17,11 @@ const Home = () => {
             <h4 class="mb-6 text-xl font-semibold">
               Posters to motivate you to <strong>ACTION</strong>
             </h4>
-            <span class="rounded border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10">
-              Shop Now
-            </span>
+            <Link to="/shop">
+              <span class="rounded border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10">
+                Shop Now
+              </span>
+            </Link>
           </div>
         </div>
       </div>

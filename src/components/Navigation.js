@@ -8,7 +8,7 @@ const Navigation = (props) => {
       <ul className="nav-list">
         <Link to="/">
           <li>
-            <h1>Motivate</h1>
+            <h1 className="font-bold">Motivate</h1>
           </li>
         </Link>
         <Link to="/shop">
@@ -25,7 +25,7 @@ const Navigation = (props) => {
                 alt="shopping bag"
               />
             </div>
-            <div className="flex items-center justify-center absolute top-3 right-1 rounded-full bg-red-600 text-white font-bold font-xs w-6 h-6">{props.items.length > 0 && props.items.length}</div>
+            <div className="flex items-center justify-center absolute top-3 right-1 rounded-full bg-red-600 text-white font-bold font-xs w-6 h-6" style={{display: props.items.length > 0 ? "flex" : "none"}}>{props.items.length > 0 && props.items.length}</div>
           </li>
         </Link>
       </ul>
