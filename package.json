@@ -1,4 +1,5 @@
 {
+  "homepage": "https://onthehook.github.io/shopping-cart",
   "name": "shopping-cart",
   "version": "0.1.0",
   "private": true,
@@ -41,6 +42,5 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"
-  },
-  "homepage": "http://onthehook.github.io/shopping-cart"
+  }
 }
