@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.243df90e.css",
-    "main.js": "/shopping-cart/static/js/main.af01126f.js",
+    "main.js": "/shopping-cart/static/js/main.c4c26305.js",
     "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/cristian-escobar-abkEAOjnY0s-unsplash.jpg": "/shopping-cart/static/media/cristian-escobar-abkEAOjnY0s-unsplash.1d3b21584f698a9e9031.jpg",
     "static/media/71ocH0mfngL._SL1500_.jpg": "/shopping-cart/static/media/71ocH0mfngL._SL1500_.c3f52795dc0d818500ca.jpg",
@@ -19,11 +19,11 @@
     "static/media/you-are-amazing_u-L-Q1HX5MC0.jpg": "/shopping-cart/static/media/you-are-amazing_u-L-Q1HX5MC0.5f70bea2eec35c0aa42d.jpg",
     "index.html": "/shopping-cart/index.html",
     "main.243df90e.css.map": "/shopping-cart/static/css/main.243df90e.css.map",
-    "main.af01126f.js.map": "/shopping-cart/static/js/main.af01126f.js.map",
+    "main.c4c26305.js.map": "/shopping-cart/static/js/main.c4c26305.js.map",
     "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.243df90e.css",
-    "static/js/main.af01126f.js"
+    "static/js/main.c4c26305.js"
   ]
 }
