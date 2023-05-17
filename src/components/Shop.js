@@ -4,9 +4,9 @@ const Shop = (props) => {
   const handleAddItem = (itemInfo) => {
     props.addItem(itemInfo.id, parseInt(itemInfo.amount));
   };
-   console.log(props.itemsList)
+  console.log(props.itemsList);
   return (
-    <div className="flex flex-wrap gap-4 p-4 justify-center">
+    <div className="flex flex-wrap gap-4 p-4 justify-center" data-testid="shop">
       {props.itemsList.map((item) => {
         return (
           <ItemCard

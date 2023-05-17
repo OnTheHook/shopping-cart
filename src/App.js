@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
@@ -81,7 +81,7 @@ function App() {
 
   const incrementDecrementAmount = (id, quantity) => {
     setItems((prev) => {
-      let newItemArray
+      let newItemArray;
       let itemInCart = items.filter((item) => {
         return item.id === id;
       })[0];
@@ -104,7 +104,13 @@ function App() {
           />
           <Route
             path="/cart"
-            element={<Cart changeAmount={incrementDecrementAmount} items={items} deleteItem={deleteItem} />}
+            element={
+              <Cart
+                changeAmount={incrementDecrementAmount}
+                items={items}
+                deleteItem={deleteItem}
+              />
+            }
           />
         </Routes>
       </div>

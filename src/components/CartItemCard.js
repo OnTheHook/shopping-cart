@@ -32,7 +32,7 @@ const CartItemCard = (props) => {
     e.preventDefault();
   }
   return (
-    <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+    <div data-testid="cart-item-card-01" className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
       <div className="flex w-2/5">
         <div className="w-20">
           <img className="h-24" src={props.image} alt={props.name} />
@@ -41,6 +41,7 @@ const CartItemCard = (props) => {
           <span className="font-bold text-sm">{props.name}</span>
           <span className="text-red-500 text-xs">Motivate Inc.</span>
           <span
+            data-testid="remove"
             onClick={props.onDelete}
             className="font-semibold hover:text-red-500 text-gray-500 text-xs cursor-pointer"
           >
@@ -53,6 +54,7 @@ const CartItemCard = (props) => {
           onClick={decrementAmount}
           className="fill-current text-gray-600 w-3"
           viewBox="0 0 448 512"
+          data-testid="decrement"
         >
           <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
         </svg>
@@ -65,12 +67,14 @@ const CartItemCard = (props) => {
           value={amount}
           onChange={handleAmountChange}
           onKeyDown={prevent}
+          data-testid="input"
         />
 
         <svg
           onClick={incrementAmount}
           className="fill-current text-gray-600 w-3"
           viewBox="0 0 448 512"
+          data-testid="increment"
         >
           <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
         </svg>
